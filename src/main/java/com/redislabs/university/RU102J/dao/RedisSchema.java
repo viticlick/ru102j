@@ -68,6 +68,10 @@ public class RedisSchema {
                 String.valueOf(siteId);
     }
 
+    static String getMetricValue(double value, int minuteOfDay) {
+        return String.valueOf(value) + ":" + minuteOfDay;
+    }
+
     // sites:feed
     // Redis type: stream
     static String getGlobalFeedKey() {
